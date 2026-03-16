@@ -44,14 +44,23 @@ AI truly helped me understand why some tests kept failing. It made me realize th
 ## 4. What did you learn about Streamlit and state?
 
 - In your own words, explain why the secret number kept changing in the original app.
+The secret number kept changing in the original app because it was stored in a normal variable. Due to this, each time I clicked a button, the secret number changed as Streamlit ran the entire script again and the variable got reset. 
+
 - How would you explain Streamlit "reruns" and session state to a friend who has never used Streamlit?
+Every time you interact with an app in any way, Streamlit reruns the entire script again which causes values to reset each time you click a button. To prevent the secret number from resetting each time, I put it in st.session_state, which essentially behaves like  memory for the app. By doing this, the secret number remains the same across all reruns. 
+
 - What change did you make that finally gave the game a stable secret number?
+I put the secret number in st.session_state and set it only if it wasn't there already. This keeps the secret number the same across all reruns as it allows Streamlit to basically "remember" the number throughout. 
 
 ---
 
 ## 5. Looking ahead: your developer habits
 
 - What is one habit or strategy from this project that you want to reuse in future labs or projects?
-  - This could be a testing habit, a prompting strategy, or a way you used Git.
+One habit I want to carry on to future labs or projects is writing tests for every bug I fix. This way, I can know if my fixes are actually working as I carry on with the project. 
+
 - What is one thing you would do differently next time you work with AI on a coding task?
+Next time, I will make sure to check the AI suggestions that I recieve more attentively before using them. This way I can also gain more experience with knowing which suggestions are beneficial and which ones won't do what I need. 
+
 - In one or two sentences, describe how this project changed the way you think about AI generated code.
+This project taught me that although AI is extremely helpful, I make the final decisions about everything at the end of the day. Not every suggestion that AI gives me will lead me in the right direction and that is completely okay. I just need to be able to choose which pieces of advice I want to use and which ones I don't want to use. 

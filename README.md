@@ -24,14 +24,14 @@ It wrote the code, ran away, and now the game is unplayable.
    - Keep fixing until all tests pass!
 
 ## 📝 Document Your Experience
+This game is a Streamlit-based number game that challenges players to test their debugging and problem-solving skills by observing and solving game logic mistakes.
 
-- [ ] Describe the game's purpose.
-- [ ] Detail which bugs you found.
-- [ ] Explain what fixes you applied.
+The two main bugs I found were that the higher/lower hints were inaccurate when compared with my number guesses and tests failed as the check_guess function returns two values (outcome and message) but the tests only verified one. 
+
+To make things easier and cleaner, I moved all game logic into logic_utils.py. I fully modified the tests in tests/test_game_logic.py to handle both values returned by check_guess and I made sure to run 'pytest' to verfiy if all three of my tests passed. 
 
 ## 📸 Demo
-
-- [ ] [Insert a screenshot of your fixed, winning game here]
+![Game Demo](pytest.png)
 
 ## 🚀 Stretch Features
 
